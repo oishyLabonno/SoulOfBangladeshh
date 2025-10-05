@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="বাংলাদেশের সংস্কৃতি - সমৃদ্ধ ঐতিহ্য, উৎসব, শিল্প এবং স্বাদের সমৃদ্ধ বুনন">
+    <title>বাংলাদেশের সংস্কৃতি - সমৃদ্ধ ঐতিহ্য</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/culture.css">
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header class="bg-white shadow-lg fixed w-full z-50" role="banner">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Flag_of_Bangladesh.svg/1200px-Flag_of_Bangladesh.svg.png" 
+                         alt="বাংলাদেশের পতাকা" 
+                         class="h-8 mr-2">
+                    <span class="text-xl font-bold text-green-800">বাংলাদেশের সংস্কৃতি</span>
+                </div>
+                
+                <nav class="hidden md:flex space-x-8 items-center" aria-label="প্রধান নেভিগেশন">
+                    <a href="#home" class="nav-link text-gray-800 hover:text-green-700 px-3 py-2">হোম</a>
+                    <a href="#festivals" class="nav-link text-gray-800 hover:text-green-700 px-3 py-2">উৎসব</a>
+                    <a href="#traditions" class="nav-link text-gray-800 hover:text-green-700 px-3 py-2">প্রথা</a>
+                    <a href="#cuisine" class="nav-link text-gray-800 hover:text-green-700 px-3 py-2">খাবার</a>
+                    <a href="#arts" class="nav-link text-gray-800 hover:text-green-700 px-3 py-2">শিল্প</a>
+                    <a href="#upcoming-festivals" class="nav-link text-gray-800 hover:text-green-700 px-3 py-2">আসন্ন উৎসব</a>
+                    <a href="#contact" class="nav-link text-gray-800 hover:text-green-700 px-3 py-2">যোগাযোগ</a>
+                    
+                    <!-- Google Translate -->
+                    <div id="googleTranslateElement" role="complementary" aria-label="ভাষা অনুবাদকারী"></div>
+                </nav>
+                
+                <button class="md:hidden text-gray-800" id="mobileMenuButton" aria-expanded="false" aria-controls="mobileMenu">
+                    <span class="sr-only">মেনু খুলুন</span>
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+
+        <!-- Mobile Menu -->
+        <nav class="md:hidden hidden bg-white shadow-xl" id="mobileMenu" aria-label="মোবাইল নেভিগেশন">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 text-gray-800 hover:text-green-700">হোম</a>
+                <a href="#festivals" class="block px-3 py-2 text-gray-800 hover:text-green-700">উৎসব</a>
+                <a href="#traditions" class="block px-3 py-2 text-gray-800 hover:text-green-700">প্রথা</a>
+                <a href="#cuisine" class="block px-3 py-2 text-gray-800 hover:text-green-700">খাবার</a>
+                <a href="#arts" class="block px-3 py-2 text-gray-800 hover:text-green-700">শিল্প</a>
+                <a href="#upcoming-festivals" class="block px-3 py-2 text-gray-800 hover:text-green-700">আসন্ন উৎসব</a>
+                <a href="#contact" class="block px-3 py-2 text-gray-800 hover:text-green-700">যোগাযোগ</a>
+                <div class="px-3 py-2">
+                    <div id="googleTranslateElementMobile" role="complementary" aria-label="ভাষা অনুবাদকারী"></div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section flex items-center justify-center text-white" aria-labelledby="hero-heading">
+            <div class="text-center px-4">
+                <h1 id="hero-heading" class="text-5xl md:text-7xl font-bold mb-6 animate__animated animate__fadeInDown">বাংলাদেশের সংস্কৃতি</h1>
+                <p class="text-xl md:text-2xl mb-8 max-w-3xl mx-auto animate__animated animate__fadeIn animate__delay-1s">
+                    শতাব্দী জুড়ে প্রসারিত ঐতিহ্য, উৎসব, শিল্প এবং স্বাদের সমৃদ্ধ বুনন
+                </p>
+            </div>
+        </section>
+
+
+        <!-- Introduction Section -->
+        <section id="explore" class="py-16 bg-white" aria-labelledby="explore-heading">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <header class="text-center mb-12">
+                    <h2 id="explore-heading" class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                        <span class="block">বাংলাদেশের সারমর্ম</span>
+                    </h2>
+                    <p class="mt-4 max-w-2xl text-xl text-gray-600 mx-auto">
+                        বাংলাদেশ, একটি প্রাণবন্ত সংস্কৃতি এবং সমৃদ্ধ ঐতিহ্যের দেশ, যেখানে ঐতিহ্য আধুনিকতার সাথে নিখুঁতভাবে মিশে যায়।
+                    </p>
+                </header>
+                
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 bg-white">
+                <article class="culture-card bg-green-50 rounded-lg overflow-hidden shadow-md p-6">
+                    <div class="text-green-600 mb-4">
+                    <i class="fas fa-landmark text-4xl" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">ঐতিহাসিক শিকড়</h3>
+                    <p class="text-gray-600">১০০০ খ্রিস্টপূর্বাব্দ থেকে শুরু হওয়া ইতিহাস নিয়ে বাংলাদেশের সংস্কৃতি মৌর্য, গুপ্ত, মুঘল এবং ব্রিটিশ সহ বিভিন্ন সাম্রাজ্য দ্বারা গঠিত হয়েছে।</p>
+                </article>
+    
+                <article class="culture-card bg-yellow-50 rounded-lg overflow-hidden shadow-md p-6">
+                    <div class="text-yellow-600 mb-4">
+                    <i class="fas fa-hands-helping text-4xl" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">বৈচিত্র্যে ঐক্য</h3>
+                    <p class="text-gray-600">বাঙালি, চাকমা, মারমা, সাঁওতাল এবং আরও অনেক জাতিগোষ্ঠীর আবাসস্থল, সবাই সাংস্কৃতিক মোজাইকে অবদান রাখে।</p>
+                </article>
+    
+                <article class="culture-card bg-red-50 rounded-lg overflow-hidden shadow-md p-6">
+                    <div class="text-red-600 mb-4">
+                    <i class="fas fa-heart text-4xl" aria-hidden="true"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">উষ্ণ আতিথেয়তা</h3>
+                    <p class="text-gray-600">"অতিথি দেবো ভব" (অতিথি ঈশ্বরের সমান) হিসাবে পরিচিত, বাংলাদেশের মানুষ তাদের উষ্ণ আতিথেয়তা এবং উদার মনোভাবের জন্য বিখ্যাত।</p>
+                </article>
+            </div>
+        </div>
+        </section>
+
+
+        <!-- Festivals Section -->
+        <section id="festivals" class="py-16 bg-gray-50" aria-labelledby="festivals-heading">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <header class="text-center mb-12">
+                    <h2 id="festivalsHeading" class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                        <span class="block">প্রাণবন্ত উৎসব</span>
+                    </h2>
+                    <p class="mt-4 max-w-2xl text-xl text-gray-600 mx-auto">
+                        বাংলাদেশ তার ধর্মনিরপেক্ষ ও বহুত্ববাদী সমাজকে প্রতিফলিত করে উৎসবগুলি মহা উৎসাহে পালন করে।
+                    </p>
+                </header>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6" id="festivalContainer">
+                    <!-- Festivals will be loaded from database via JavaScript -->
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Traditions Section -->
+        <section id="traditions" class="py-16 bg-white" aria-labelledby="traditions-heading">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <header class="text-center mb-12">
+                    <h2 id="traditions-heading" class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                        <span class="block">সাংস্কৃতিক ঐতিহ্য</span>
+                    </h2>
+                    <p class="mt-4 max-w-2xl text-xl text-gray-600 mx-auto">
+                        প্রজন্ম থেকে প্রজন্মান্তরে চলে আসা সময়-সম্মানিত রীতিনীতি।
+                    </p>
+                </header>
+                
+                <article class="flex flex-col md:flex-row items-center mb-12">
+                    <div class="md:w-1/2 mb-8 md:mb-0 md:pr-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">বিবাহ অনুষ্ঠান</h3>
+                        <p class="text-gray-600 mb-4">বাংলাদেশী বিবাহ হল বহু-দিনের অনুষ্ঠান যা গায়ে হলুদ, মেহেদী এবং মূল বিবাহ অনুষ্ঠানের মতো রীতিনীতি দিয়ে পূর্ণ।</p>
+                        <p class="text-gray-600">ঐতিহ্যবাহী পোশাকের মধ্যে রয়েছে লাল বেনারসি শাড়িতে সজ্জিত কনে এবং পাঞ্জাবি বা শেরওয়ানি পরা বর।</p>
+                    </div>
+                    <div class="md:w-1/2 rounded-lg overflow-hidden shadow-xl transform transition duration-500 hover:scale-105">
+                        <img src="https://i.redd.it/ehgh0ddg4l961.jpg" 
+                             alt="বাংলাদেশী বিবাহ অনুষ্ঠান" 
+                             class="w-full h-auto">
+                    </div>
+                </article>
+                
+                <article class="flex flex-col md:flex-row-reverse items-center">
+                    <div class="md:w-1/2 mb-8 md:mb-0 md:pl-8">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-4">লোক সঙ্গীত ও নৃত্য</h3>
+                        <p class="text-gray-600 mb-4">ঐতিহ্যবাহী সঙ্গীতের মধ্যে রয়েছে বাউল, ভাটিয়ালি, ভাওয়াইয়া এবং জারি। ঝুমুর, ছৌ এবং মণিপুরির মতো লোকনৃত্য সাংস্কৃতিক উদযাপনের অবিচ্ছেদ্য অংশ।</p>
+                        <p class="text-gray-600">দোতারা, একতারা, বাঁশি এবং ঢোলের মতো বাদ্যযন্ত্র লোক পরিবেশনার সাধারণভাবে ব্যবহৃত হয়।</p>
+                    </div>
+                    <div class="md:w-1/2 rounded-lg overflow-hidden shadow-xl transform transition duration-500 hover:scale-105">
+                        <img src="https://i.ytimg.com/vi/R0xyKNvf_Wc/maxresdefault.jpg" 
+                             alt="বাংলাদেশী লোকনৃত্যের দৃশ্য" 
+                             class="w-full h-auto">
+                    </div>
+                </article>
+            </div>
+        </section>
+
+
+        <!-- Cuisine Section -->
+        <section id="cuisine" class="py-16 bg-green-50" aria-labelledby="cuisine-heading">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <header class="text-center mb-12">
+                    <h2 id="cuisine-heading" class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                        <span class="block">বাংলাদেশের স্বাদ</span>
+                    </h2>
+                    <p class="mt-4 max-w-2xl text-xl text-gray-600 mx-auto">
+                        বাংলাদেশী রান্নার সমৃদ্ধ এবং বৈচিত্র্যময় স্বাদের মাধ্যমে একটি রন্ধনসম্পর্কীয় যাত্রা।
+                    </p>
+                </header>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8" id="foodContainer">
+                    <!-- Biryani -->
+                    <article class="food-card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300 h-96">
+                        <div class="food-inner">
+                            <div class="food-front">
+                                <img src="https://static.wixstatic.com/media/91e241_b44aab0c38364d05b4d66a563af1aa6b~mv2.jpg/v1/fill/w_864,h_576,al_c,lg_1,q_85/91e241_b44aab0c38364d05b4d66a563af1aa6b~mv2.jpg" 
+                                     alt="বিরিয়ানি" 
+                                     class="w-full h-48 object-cover">
+                                <div class="p-6">
+                                    <h3 class="text-xl font-bold text-gray-800 mb-2">বিরিয়ানি</h3>
+                                    <p class="text-gray-600">সুগন্ধি চাল দিয়ে রান্না করা মাংস (মুরগি, গরু বা খাসি), মসলা এবং আলু সহ।</p>
+                                </div>
+                            </div>
+                            <div class="food-back bg-green-100 p-6 flex flex-col justify-center h-full">
+                                <h3 class="text-xl font-bold text-gray-800 mb-4">বিরিয়ানি</h3>
+                                <p class="text-gray-700 mb-2"><strong>উপাদান:</strong></p>
+                                <p class="text-gray-600">বাসমতি চাল, মাংস, দই, পেঁয়াজ, রসুন, আদা, মসলা</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Ilish Maacher Jhol -->
+                    <article class="food-card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300 h-96">
+                        <div class="food-inner">
+                            <div class="food-front">
+                                <img src="https://i.ytimg.com/vi/RAkmwggMygQ/maxresdefault.jpg" 
+                                     alt="ইলিশ মাছের ঝোল" 
+                                     class="w-full h-48 object-cover">
+                                <div class="p-6">
+                                    <h3 class="text-xl font-bold text-gray-800 mb-2">ইলিশ মাছের ঝোল</h3>
+                                    <p class="text-gray-600">সরিষার সসে বা হলুদ ও মরিচ দিয়ে প্রস্তুত বাংলাদেশের জাতীয় মাছ।</p>
+                                </div>
+                            </div>
+                            <div class="food-back bg-green-100 p-6 flex flex-col justify-center h-full">
+                                <h3 class="text-xl font-bold text-gray-800 mb-4">ইলিশ মাছের ঝোল</h3>
+                                <p class="text-gray-700 mb-2"><strong>উপাদান:</strong></p>
+                                <p class="text-gray-600">ইলিশ মাছ, সরিষার পেস্ট, হলুদ, কাঁচা মরিচ, সরিষার তেল</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Panta Bhat -->
+                    <article class="food-card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300 h-96">
+                        <div class="food-inner">
+                            <div class="food-front">
+                                <img src="https://cdn.dhakapost.com/media/imgAll/BG/2022March/rice-1-20220330125644.jpg" 
+                                     alt="পান্তা ভাত" 
+                                     class="w-full h-48 object-cover">
+                                <div class="p-6">
+                                    <h3 class="text-xl font-bold text-gray-800 mb-2">পান্তা ভাত</h3>
+                                    <p class="text-gray-600">গাঁজানো ভাত লবণ, পেঁয়াজ এবং মরিচের সাথে পরিবেশন করা, পহেলা বৈশাখের জন্য ঐতিহ্যবাহী।</p>
+                                </div>
+                            </div>
+                            <div class="food-back bg-green-100 p-6 flex flex-col justify-center h-full">
+                                <h3 class="text-xl font-bold text-gray-800 mb-4">পান্তা ভাত</h3>
+                                <p class="text-gray-700 mb-2"><strong>উপাদান:</strong></p>
+                                <p class="text-gray-600">বাসি ভাত, পানি, লবণ, পেঁয়াজ, কাঁচা মরিচ</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Fuchka -->
+                    <article class="food-card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300 h-96">
+                        <div class="food-inner">
+                            <div class="food-front">
+                                <img src="http://rannaghor.org/wp-content/uploads/2023/06/Untitled-design-64-1-1.webp" 
+                                     alt="ফুচকা" 
+                                     class="w-full h-48 object-cover">
+                                <div class="p-6">
+                                    <h3 class="text-xl font-bold text-gray-800 mb-2">ফুচকা</h3>
+                                    <p class="text-gray-600">জনপ্রিয় রাস্তার খাবার - ক্রিস্পি ফাঁপা পুরি তেঁতুলের পানি, ছোলা এবং আলুর পুর দিয়ে ভরা।</p>
+                                </div>
+                            </div>
+                            <div class="food-back bg-green-100 p-6 flex flex-col justify-center h-full">
+                                <h3 class="text-xl font-bold text-gray-800 mb-4">ফুচকা</h3>
+                                <p class="text-gray-700 mb-2"><strong>উপাদান:</strong></p>
+                                <p class="text-gray-600">তেঁতুল, ছোলা, আলু, মরিচ গুঁড়ো</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Vapa Pitha -->
+                    <article class="food-card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300 h-96">
+                        <div class="food-inner">
+                            <div class="food-front">
+                                <img src="https://cdx.dhakamail.com/media/images/2023January/vapa1-20230114150203.jpg" 
+                                     alt="ভাপা পিঠা" 
+                                     class="w-full h-48 object-cover">
+                                <div class="p-6">
+                                    <h3 class="text-xl font-bold text-gray-800 mb-2">ভাপা পিঠা</h3>
+                                    <p class="text-gray-600">স্টিমড রাইস কেক সাধারণত নারকেল বা গুড় দিয়ে স্টাফ করা হয়, শীতকালীন ঐতিহ্যবাহী খাবার।</p>
+                                </div>
+                            </div>
+                            <div class="food-back bg-green-100 p-6 flex flex-col justify-center h-full">
+                                <h3 class="text-xl font-bold text-gray-800 mb-4">ভাপা পিঠা</h3>
+                                <p class="text-gray-700 mb-2"><strong>উপাদান:</strong></p>
+                                <p class="text-gray-600">চালের গুঁড়া, নারকেল, গুড়, লবণ</p>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Morog Polao -->
+                    <article class="food-card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300 h-96">
+                        <div class="food-inner">
+                            <div class="food-front">
+                                <img src="https://bengali.cdn.zeenews.com/bengali/sites/default/files/2022/10/27/394329-nanna-miyar-morog-polao.png" 
+                                     alt="মোরগ পোলাও" 
+                                     class="w-full h-48 object-cover">
+                                <div class="p-6">
+                                    <h3 class="text-xl font-bold text-gray-800 mb-2">মোরগ পোলাও</h3>
+                                    <p class="text-gray-600">সুগন্ধি চাল দিয়ে রান্না করা মুরগি, মসলা এবং কিসমিস দিয়ে সাজানো।</p>
+                                </div>
+                            </div>
+                            <div class="food-back bg-green-100 p-6 flex flex-col justify-center h-full">
+                                <h3 class="text-xl font-bold text-gray-800 mb-4">মোরগ পোলাও</h3>
+                                <p class="text-gray-700 mb-2"><strong>উপাদান:</strong></p>
+                                <p class="text-gray-600">বাসমতি চাল, মুরগি, ঘি, পেঁয়াজ, মসলা, কিসমিস</p>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Advertisement Section -->
+        <section class="py-8 bg-gray-100" aria-labelledby="advertisement-heading">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <header class="text-center mb-6">
+                    <h3 id="advertisement-heading" class="text-xl font-semibold text-gray-700">বাংলাদেশী রন্ধনশৈলী</h3>
+                </header>
+                <div class="bg-white rounded-lg shadow-md overflow-hidden max-w-2xl mx-auto">
+                    <a href="ecommerce.html" target="_blank" class="block">
+                        <img src="images/ImageN/spice_ad.gif" 
+                             alt="বাংলাদেশের মসলা ও রান্নার প্রোডাক্ট" 
+                             class="w-full h-auto">
+                    </a>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Arts & Crafts Section -->
+        <section id="arts" class="py-16 bg-white" aria-labelledby="arts-heading">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <header class="text-center mb-12">
+                    <h2 id="arts-heading" class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                        <span class="block">ঐতিহ্যবাহী শিল্প ও কারুশিল্প</span>
+                    </h2>
+                    <p class="mt-4 max-w-2xl text-xl text-gray-600 mx-auto">
+                        বাংলাদেশের শিল্প ঐতিহ্য তার সাংস্কৃতিক সমৃদ্ধি এবং কারুশিল্পকে প্রতিফলিত করে।
+                    </p>
+                </header>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="artisanContainer">
+                    <!-- Artisan items will be loaded from database via JavaScript -->
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Language & Literature Section -->
+        <section class="py-16 bg-gray-50" aria-labelledby="language-heading">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <header class="text-center mb-12">
+                    <h2 id="language-heading" class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                        <span class="block">ভাষা ও সাহিত্য</span>
+                    </h2>
+                    <p class="mt-4 max-w-2xl text-xl text-gray-600 mx-auto">
+                        শব্দের মাধ্যমে প্রকাশিত বাংলাদেশী সংস্কৃতির আত্মা।
+                    </p>
+                </header>
+                
+                <article class="bg-white rounded-lg shadow-xl overflow-hidden">
+                    <div class="md:flex">
+                        <div class="md:w-1/2 p-8 md:p-12">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-4">বাংলা ভাষা</h3>
+                            <p class="text-gray-600 mb-4">বাংলা (বাংলা) বাংলাদেশের ৯৮% মানুষের মাতৃভাষা এবং সরকারী ভাষা। এটির হাজার বছরেরও বেশি সময়ের সমৃদ্ধ সাহিত্য ঐতিহ্য রয়েছে।</p>
+                            <p class="text-gray-600 mb-6">১৯৫২ সালের ভাষা আন্দোলন, যা আন্তর্জাতিক মাতৃভাষা দিবস (২১শে ফেব্রুয়ারি) এর দিকে নিয়ে যায়, বাংলাদেশের ইতিহাসের একটি নির্ধারিত মুহূর্ত।</p>
+                            <div class="bg-green-100 border-l-4 border-green-500 p-4">
+                                <p class="text-green-700 font-medium">"আমার সোনার বাংলা, আমি তোমায় ভালোবাসি"</p>
+                                <p class="text-gray-600">(রবীন্দ্রনাথ ঠাকুর রচিত জাতীয় সঙ্গীতের প্রথম লাইন)</p>
+                            </div>
+                        </div>
+                        <div class="md:w-1/2 bg-green-600 flex items-center justify-center p-8">
+                            <div class="text-white text-center">
+                                <i class="fas fa-book-open text-6xl mb-6 wave" aria-hidden="true"></i>
+                                <h3 class="text-2xl font-bold mb-4">সাহিত্যিক দিকপাল</h3>
+                                <p class="mb-2">রবীন্দ্রনাথ ঠাকুর - নোবেল পুরস্কার বিজয়ী</p>
+                                <p class="mb-2">কাজী নজরুল ইসলাম - জাতীয় কবি</p>
+                                <p class="mb-2">জসীমউদ্দীন - গ্রামীণ জীবনের কবি</p>
+                                <p class="mb-2">বেগম রোকেয়া - নারীবাদী লেখিকা</p>
+                                <p>হুমায়ূন আহমেদ - আধুনিক সাহিত্যিক আইকন</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+
+        <!-- Traditional Clothing Section -->
+        <section class="py-16 bg-white" aria-labelledby="clothing-heading">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <header class="text-center mb-12">
+                    <h2 id="clothing-heading" class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                        <span class="block">ঐতিহ্যবাহী পোশাক</span>
+                    </h2>
+                    <p class="mt-4 max-w-2xl text-xl text-gray-600 mx-auto">
+                        বাংলাদেশী সংস্কৃতিকে আচ্ছাদিত রঙিন বস্ত্র।
+                    </p>
+                </header>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <article class="bg-yellow-50 rounded-lg p-8 shadow-md">
+                        <div class="flex items-center mb-6">
+                            <div class="bg-yellow-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-female text-yellow-600 text-2xl" aria-hidden="true"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800">মহিলাদের পোশাক</h3>
+                        </div>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-yellow-500 mt-1 mr-2" aria-hidden="true"></i>
+                                <span class="text-gray-700"><strong>শাড়ি</strong> - অপরিহার্য বাংলা পোশাক, প্রায়শ মসলিন, জামদানি বা সিল্ক দিয়ে তৈরি</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-yellow-500 mt-1 mr-2" aria-hidden="true"></i>
+                                <span class="text-gray-700"><strong>সালোয়ার কামিজ</strong> - শহরাঞ্চলে বিশেষভাবে আরামদায়ক দৈনন্দিন পোশাক</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-yellow-500 mt-1 mr-2" aria-hidden="true"></i>
+                                <span class="text-gray-700"><strong>জামদানি</strong> - জটিল হাতে বোনা নকশা সহ বিশ্ব-বিখ্যাত সূক্ষ্ম মসলিন কাপড়</span>
+                            </li>
+                        </ul>
+                    </article>
+                    
+                    <article class="bg-blue-50 rounded-lg p-8 shadow-md">
+                        <div class="flex items-center mb-6">
+                            <div class="bg-blue-100 p-3 rounded-full mr-4">
+                                <i class="fas fa-male text-blue-600 text-2xl" aria-hidden="true"></i>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-800">পুরুষদের পোশাক</h3>
+                        </div>
+                        <ul class="space-y-3">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-blue-500 mt-1 mr-2" aria-hidden="true"></i>
+                                <span class="text-gray-700"><strong>লুঙ্গি</strong> - ঐতিহ্যবাহী মোড়ানো পোশাক, সাধারণত গ্রামীণ এলাকায় পরা হয়</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-blue-500 mt-1 mr-2" aria-hidden="true"></i>
+                                <span class="text-gray-700"><strong>পাঞ্জাবি</strong> - ঐতিহ্যবাহী সূচিকর্মযুক্ত কুর্তা, প্রায়শ পায়জামার সাথে পরা হয়</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-blue-500 mt-1 mr-2" aria-hidden="true"></i>
+                                <span class="text-gray-700"><strong>শেরওয়ানি</strong> - বিবাহের মতো বিশেষ অনুষ্ঠানের জন্য আনুষ্ঠানিক পোশাক</span>
+                            </li>
+                        </ul>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Architecture Section -->
+        <section class="py-16 bg-gray-50" aria-labelledby="architecture-heading">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <header class="text-center mb-12">
+                    <h2 id="architecture-heading" class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                        <span class="block">স্থাপত্য ঐতিহ্য</span>
+                    </h2>
+                    <p class="mt-4 max-w-2xl text-xl text-gray-600 mx-auto">
+                        প্রাচীন, মধ্যযুগীয় এবং ঔপনিবেশিক প্রভাবের মিশ্রণ।
+                    </p>
+                </header>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <article class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+                        <img src="http://ekattorerdarpon24.com/wp-content/uploads/2023/02/Ancient--700x390.jpg" 
+                             alt="সোমপুর মহাবিহার" 
+                             class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">সোমপুর মহাবিহার</h3>
+                            <p class="text-gray-600">হিমালয়ের দক্ষিণে অবস্থিত বৃহত্তম বৌদ্ধ বিহার, ৮ম শতাব্দীতে নির্মিত এবং এখন ইউনেস্কো বিশ্ব ঐতিহ্যবাহী স্থান।</p>
+                        </div>
+                    </article>
+                    
+                    <article class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+                        <img src="https://www.kuhudak.com/wp-content/uploads/2024/04/Lalbagh-Fort-Kuhudak-700x327.jpg" 
+                             alt="লালবাগ কেল্লা" 
+                             class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">লালবাগ কেল্লা</h3>
+                            <p class="text-gray-600">ঢাকায় অবস্থিত একটি অসম্পূর্ণ ১৭শ শতাব্দীর মুঘল দুর্গ কমপ্লেক্স, যাতে একটি মসজিদ, পারি বিবির সমাধি এবং দীওয়ান-ই-আম রয়েছে।</p>
+                        </div>
+                    </article>
+                    
+                    <article class="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+                        <img src="https://i.pinimg.com/736x/d8/7a/e0/d87ae04e009c15aa24bf22f01fb18d9e.jpg" 
+                             alt="আহসান মঞ্জিল" 
+                             class="w-full h-48 object-cover">
+                        <div class="p-6">
+                            <h3 class="text-xl font-bold text-gray-800 mb-2">আহসান মঞ্জিল</h3>
+                            <p class="text-gray-600">ঢাকার গোলাপী প্রাসাদ, ঢাকার নবাবের প্রাক্তন সরকারী বাসভবন, যা ইন্দো-সারাসেনিক পুনরুজ্জীবন স্থাপত্য প্রদর্শন করে।</p>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Upcoming Festivals Section -->
+        <section id="upcoming-festivals" class="py-16 bg-gray-50" aria-labelledby="upcoming-festivals-heading">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <header class="text-center mb-12">
+                    <h2 id="upcoming-festivals-heading" class="text-3xl font-extrabold text-gray-900 sm:text-4xl">
+                        <span class="block">আসন্ন সাংস্কৃতিক উৎসব</span>
+                    </h2>
+                    <p class="mt-4 max-w-2xl text-xl text-gray-600 mx-auto">
+                        আগামী দিনগুলোর উৎসবের সময়সূচী দেখুন এবং রিমাইন্ডার সেট করুন
+                    </p>
+                </header>
+
+                <!-- Reminder Management Section -->
+                <div class="mb-16">
+                    <div class="bg-gradient-to-r from-green-500 via-blue-500 to-purple-600 rounded-2xl shadow-2xl overflow-hidden">
+                        <div class="grid grid-cols-1 lg:grid-cols-2">
+                            <!-- View Reminders -->
+                            <div class="p-8 bg-white bg-opacity-10 backdrop-blur-sm border-r border-white border-opacity-20">
+                                <div class="text-center mb-6">
+                                    <div class="inline-flex items-center justify-center w-16 h-16 bg-white bg-opacity-20 rounded-full mb-4 partition-icon">
+                                        <i class="fas fa-bell text-white text-2xl" aria-hidden="true"></i>
+                                    </div>
+                                    <h3 class="text-2xl font-bold text-white mb-2">আপনার রিমাইন্ডার দেখুন</h3>
+                                    <p class="text-white text-opacity-90">আপনার সেট করা সকল রিমাইন্ডার একসাথে দেখুন</p>
+                                </div>
+                                
+                                <form id="viewRemindersForm" class="space-y-4">
+                                    <div>
+                                        <label for="user-email" class="block text-sm font-medium text-white mb-2">
+                                            <i class="fas fa-envelope mr-2" aria-hidden="true"></i>আপনার ইমেইল ঠিকানা
+                                        </label>
+                                        <input type="email" 
+                                               id="userEmail" 
+                                               name="email" 
+                                               required 
+                                               class="w-full px-4 py-3 glass-input rounded-lg focus:ring-2 focus:ring-white focus:border-white text-white placeholder-white placeholder-opacity-70 transition duration-300"
+                                               placeholder="আপনার ইমেইল দিন">
+                                    </div>
+                                    <button type="submit" 
+                                            class="w-full bg-white text-green-600 font-bold py-3 px-6 rounded-lg hover:bg-gray-100 transform hover:scale-105 transition duration-300 partition-btn flex items-center justify-center">
+                                        <i class="fas fa-eye mr-2" aria-hidden="true"></i>
+                                        রিমাইন্ডার দেখুন
+                                    </button>
+                                </form>
+                            </div>
+
+                            <!-- Set Reminder Info -->
+                            <div class="p-8 bg-white bg-opacity-5 backdrop-blur-sm">
+                                <div class="text-center mb-6">
+                                    <div class="inline-flex items-center justify-center w-16 h-16 bg-white bg-opacity-20 rounded-full mb-4 partition-icon">
+                                        <i class="fas fa-calendar-plus text-white text-2xl" aria-hidden="true"></i>
+                                    </div>
+                                    <h3 class="text-2xl font-bold text-white mb-2">রিমাইন্ডার সেট করুন</h3>
+                                    <p class="text-white text-opacity-90">উৎসবের জন্য রিমাইন্ডার সেট করে কখনই ভুলবেন না</p>
+                                </div>
+                                
+                                <div class="space-y-4 text-white text-opacity-90">
+                                    <div class="flex items-start space-x-3 feature-item p-3 rounded-lg hover:bg-white hover:bg-opacity-10 transition duration-300">
+                                        <i class="fas fa-check-circle text-green-300 mt-1 text-lg" aria-hidden="true"></i>
+                                        <div>
+                                            <h4 class="font-semibold text-white">সহজ সেটআপ</h4>
+                                            <p class="text-sm">ক্লিক করে রিমাইন্ডার সেট করুন</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="flex items-start space-x-3 feature-item p-3 rounded-lg hover:bg-white hover:bg-opacity-10 transition duration-300">
+                                        <i class="fas fa-bell text-yellow-300 mt-1 text-lg" aria-hidden="true"></i>
+                                        <div>
+                                            <h4 class="font-semibold text-white">টাইমলি নোটিফিকেশন</h4>
+                                            <p class="text-sm">আপনার পছন্দের তারিখে রিমাইন্ডার পান</p>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="flex items-start space-x-3 feature-item p-3 rounded-lg hover:bg-white hover:bg-opacity-10 transition duration-300">
+                                        <i class="fas fa-mobile-alt text-blue-300 mt-1 text-lg" aria-hidden="true"></i>
+                                        <div>
+                                            <h4 class="font-semibold text-white">যেকোনো ডিভাইস</h4>
+                                            <p class="text-sm">সব ডিভাইসে এক্সেস করুন</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="mt-6 p-4 bg-white bg-opacity-10 rounded-lg border border-white border-opacity-20">
+                                    <p class="text-white text-sm text-center">
+                                        <i class="fas fa-lightbulb text-yellow-300 mr-2" aria-hidden="true"></i>
+                                        নিচের উৎসবগুলো থেকে রিমাইন্ডার সেট করুন
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Reminders List Display Area -->
+                <div id="reminders-list" class="mb-12 hidden">
+                    <!-- User reminders will be displayed here -->
+                </div>
+
+                <!-- Partition Separator -->
+                <div class="relative mb-12">
+                    <div class="absolute inset-0 flex items-center" aria-hidden="true">
+                        <div class="w-full border-t border-gray-300"></div>
+                    </div>
+                    <div class="relative flex justify-center">
+                        <span class="bg-gray-50 px-4 text-2xl font-bold text-gray-900">
+                            <i class="fas fa-star text-yellow-500 mr-2" aria-hidden="true"></i>
+                            আসন্ন উৎসব সমূহ
+                            <i class="fas fa-star text-yellow-500 ml-2" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                </div>
+                
+                <!-- Upcoming Festivals Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6" id="upcomingFestivalsContainer">
+                    <!-- Upcoming festivals will be loaded here -->
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Reminder Modal -->
+        <div id="reminderModal" class="fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full hidden z-50" role="dialog" aria-labelledby="reminder-modal-title">
+            <div class="relative top-20 mx-auto p-5 border w-96 shadow-lg rounded-md bg-white">
+                <div class="mt-3">
+                    <h3 id="reminder-modal-title" class="text-lg font-medium text-gray-900 mb-4">রিমাইন্ডার সেট করুন</h3>
+                    
+                    <form id="setReminderForm">
+                        <input type="hidden" id="selectedFestivalId">
+                        <input type="hidden" id="selectedFestivalName">
+                        <input type="hidden" id="selectedFestivalDate">
+                        
+                        <div class="mb-4">
+                            <label for="reminder-email" class="block text-sm font-medium text-gray-700 mb-2">ইমেইল ঠিকানা</label>
+                            <input type="email" 
+                                   id="reminderEmail" 
+                                   required 
+                                   class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+                                   placeholder="আপনার ইমেইল দিন">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="reminder-date" class="block text-sm font-medium text-gray-700 mb-2">রিমাইন্ডার তারিখ</label>
+                            <input type="date" 
+                                   id="reminderDate" 
+                                   required 
+                                   class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        </div>
+                        
+                        <div class="flex justify-end space-x-3 mt-6">
+                            <button type="button" 
+                                    id="closeModal" 
+                                    class="px-4 py-2 bg-gray-300 text-gray-700 rounded-md hover:bg-gray-400 transition duration-300">
+                                বাতিল
+                            </button>
+                            <button type="submit" 
+                                    class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition duration-300">
+                                সেট করুন
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="social-section">
+            <h3>যোগাযোগ করো</h3>
+            <div class="social-links">
+                <a href="https://www.facebook.com/profile.php?id=100091793178239&sk=about" 
+                   target="_blank" 
+                   class="social-link"
+                   aria-label="ফেসবুকে আমাদের ফলো করুন">
+                    <img src="https://cdn-icons-png.flaticon.com/512/124/124010.png" alt="Facebook">
+                </a>
+                
+                <a href="https://wa.me/01963883265" 
+                   target="_blank" 
+                   class="social-link"
+                   aria-label="হোয়াটসঅ্যাপে আমাদের সাথে যোগাযোগ করুন">
+                    <img src="https://cdn-icons-png.flaticon.com/512/220/220236.png" alt="WhatsApp">
+                </a>
+                
+                <a href="https://www.instagram.com/nasratj35" 
+                   target="_blank" 
+                   class="social-link"
+                   aria-label="ইনস্টাগ্রামে আমাদের ফলো করুন">
+                    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+                </a>
+                
+                <a href="https://www.linkedin.com/in/nasrat-jahan-b23b81277" 
+                   target="_blank" 
+                   class="social-link"
+                   aria-label="লিঙ্কডইনে আমাদের সাথে সংযুক্ত হন">
+                    <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+                </a>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            &copy; নাছরাত জাহান. সর্বস্বত্ব সংরক্ষিত।
+        </div>
+    </footer>
+
+
+    
+    <script>
+        // Scroll animation for sections
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('.institution-section');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+        });
+
+        // Google Translate
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'bn',
+                includedLanguages: 'en,hi,fr,es,de,ar,zh-CN,ja',
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'googleTranslateElement');
+        }
+    </script>
+    <script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</body>
+
+</html>

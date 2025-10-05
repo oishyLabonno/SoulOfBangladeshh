@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <style type="text/css">
+    .signup-op a {
+      text-decoration: none;
+      border: 2px solid #000;
+      background-color: rgba(68,241,154,1);
+      padding: 8px 20px;
+      color: black;
+      transition: 0.8s ease;
+    }
+    .signup-op a:hover {
+      background-color: white;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="slideshow-container" style="position: relative; height: 100vh; overflow: hidden;">
+      <!-- Background video -->
+      <video autoplay muted loop id="bg-video" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
+        <source src="video.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+      </video>
+
+      <!-- Centered caption -->
+      <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-size: 48px; font-weight: bold; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; text-shadow: 2px 2px 6px black; z-index: 1;">
+        Soul of Bangladesh
+      </div>
+
+      <div class="main">
+        <ul class="list">
+          <li class="logo"><a href="mainPage.html"><img src="earth-globe.png" alt="Logo" style="width:36px;height:36px"></a></li>
+          <div class="search">
+            <form method="POST" action="info.php">
+              <input type="text" name="search_p" placeholder="Search.." size="50">
+              <input type="image" name="submit_p" src="search_icon.png" alt="Search image" style="width:22px;height:22px; margin-left: 60px; margin-top: 32px;">
+            </form>
+          </div>
+        </ul>
+        <ul class="list2">
+          <li class="active-menu"><a href="mainPage.html">Home</a></li>
+          <li><a id="long" href="destination.html">All Sectors</a></li>
+          <li><a href="admin.html">Admin </a></li>
+          <li><a href="feedback.html">Feedback</a></li>
+        
+        </ul>
+      </div>
+
+      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+  </header>
+
+  <br>
+  <div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span> 
+  </div>
+
+  <div class="title">
+    <h1 style="font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: rgb(212, 11, 11);border-radius: 4%; background-color: black;"></h1>
+  </div>
+
+
+
+<!-- Place this ABOVE your Destination, Culture, Food & Festivals sections -->
+
+<div id="adBanner" class="ad-banner">
+  <span class="ad-close" onclick="closeAd()">&times;</span>
+  <a href="handmade/index.html" target="_blank" class="ad-link">
+    <img id="adImage" src="images/destination/ad.jpg" alt="Advertisement" />
+    <button class="visit-btn">Visit</button>
+  </a>
+</div>
+
+<div class="info-section">
+  <div class="info-header">
+    <h2>Bangladesh at a Glance / বাংলাদেশের পরিচিতি</h2>
+  </div>
+  <div class="info-container">
+
+    <!-- History Section -->
+    <div class="info-box history-box">
+      <h3>History / ইতিহাস</h3>
+      <img src="images/destination/war.jpg" alt="History Image">
+      <p class="read-more-text">
+        <span class="short-text">
+          <strong>EN:</strong> Bangladesh gained independence in 1971 after a bloody war...<br>
+          <strong>BN:</strong> বাংলাদেশ ১৯৭১ সালে রক্তক্ষয়ী যুদ্ধে স্বাধীনতা লাভ করে...
+        </span>
+        <span class="full-text hidden">
+          <strong>EN:</strong> Bangladesh gained its independence in 1971 after a bloody liberation war. Rooted in the Language Movement and nationalism, the new nation rose with determination. After independence, it rebuilt and gradually adopted economic and democratic reforms. In the 2000s, the "Digital Bangladesh" vision emerged. Today, the country is recognized as a fast-growing economy with the dream of becoming a Smart Bangladesh by 2025.<br>
+          <strong>BN:</strong> বাংলাদেশ ১৯৭১ সালে একটি রক্তক্ষয়ী মুক্তিযুদ্ধের মাধ্যমে স্বাধীনতা অর্জন করে। ভাষা আন্দোলন ও জাতীয়তাবাদী চেতনায় দেশটি গঠিত হয়। স্বাধীনতার পর পুনর্গঠন ও গণতন্ত্র প্রতিষ্ঠা হয়। ২০০০ সালে ডিজিটাল বাংলাদেশ ধারণা চালু হয়। ২০২৫ সালের মধ্যে একটি স্মার্ট বাংলাদেশ গড়ার লক্ষ্যে অগ্রসর হচ্ছে।
+        </span>
+        <a href="History/home.html">click For More Information</a>
+        <button class="read-more-btn" onclick="toggleText(this)">See More</button>
+      </p>
+    </div>
+
+    <!-- Culture Section -->
+    <div class="info-box culture-box">
+      <h3>Culture / সংস্কৃতি</h3>
+      <img src="images/destination/c1.jpg" alt="Culture Image">
+      <p class="read-more-text">
+        <span class="short-text">
+          <strong>EN:</strong> Bangladesh has a rich cultural heritage from ancient traditions...<br>
+          <strong>BN:</strong> বাংলাদেশের সংস্কৃতি প্রাচীন ঐতিহ্যে পরিপূর্ণ...
+        </span>
+        <span class="full-text hidden">
+          <strong>EN:</strong> Bangladesh boasts a diverse and rich cultural heritage. Folk songs, poetry, crafts, and traditional festivals form its cultural identity. Urban modernity blends with rural traditions. Celebrations like Pohela Boishakh and Language Martyrs’ Day reflect unity in diversity. Young generations today embrace both technology and tradition.<br>
+          <strong>BN:</strong> বাংলাদেশের সংস্কৃতি হাজার বছরের প্রাচীন ঐতিহ্যে ভরপুর। লোকসঙ্গীত, পুঁথিপাঠ, ও নকশিকাঁথা এর গুরুত্বপূর্ণ অংশ। শহরের আধুনিকতা ও গ্রামের ঐতিহ্য একত্রে বাস করে। পহেলা বৈশাখ ও একুশে ফেব্রুয়ারি জাতীয় ঐক্যের প্রতীক। তরুণ সমাজ এখন প্রযুক্তি ও সংস্কৃতি একত্রে ধারণ করছে।
+        </span>
+        <a href="culture.html">click For More Information</a>
+        <button class="read-more-btn" onclick="toggleText(this)">See More</button>
+      </p>
+    </div>
+
+    <!-- Food Section -->
+    <div class="info-box food-box">
+      <h3>Food / খাবার</h3>
+      <img src="images/destination/food.jpg" alt="Food Image">
+      <p class="read-more-text">
+        <span class="short-text">
+          <strong>EN:</strong> Bangladeshi food is flavorful and diverse...<br>
+          <strong>BN:</strong> বাঙালি খাবার স্বাদে অনন্য...
+        </span>
+        <span class="full-text hidden">
+          <strong>EN:</strong> Bangladeshi food is known for its variety and richness. Dishes like hilsa fish, biryani, pitha, and khichuri carry cultural significance. While global cuisines have entered cities, traditional food still rules homes. Regional flavors reflect Bangladesh’s culinary diversity. Food is not just nourishment, it’s culture.<br>
+          <strong>BN:</strong> বাঙালি খাবার স্বাদে ও বৈচিত্র্যে অনন্য। ইলিশ, বিরিয়ানি, পিঠা ও খিচুড়ি ঐতিহ্যের অংশ। শহরে আন্তর্জাতিক খাবার জনপ্রিয় হলেও ঘরে ঘরে দেশীয় রান্না চলে। অঞ্চলভেদে ভিন্ন স্বাদে পরিপূর্ণ। খাবার কেবল খাওয়ার উপকরণ নয়, এটি আমাদের সংস্কৃতির প্রতিচ্ছবি।
+        </span>
+        <a href="food/home.php">click For More Information</a>
+      
+        <button class="read-more-btn" onclick="toggleText(this)">See More</button>
+      </p>
+    </div>
+
+    <!-- Festival Section -->
+    <div class="info-box festival-box">
+      <h3>Festivals / উৎসব</h3>
+      <img src="images/destination/f1.jpg" alt="Festival Image">
+      <p class="read-more-text">
+        <span class="short-text">
+          <strong>EN:</strong> Festivals unite Bangladesh with color and joy...<br>
+          <strong>BN:</strong> উৎসব বাংলাদেশকে আনন্দে ভরিয়ে তোলে...
+        </span>
+        <span class="full-text hidden">
+          <strong>EN:</strong> Festivals in Bangladesh are joyful gatherings. Celebrations like Eid, Durga Puja, and Bengali New Year unite people across religions and regions. Cultural fairs, music, and food create vibrant atmospheres. These events reflect harmony, heritage, and happiness.<br>
+          <strong>BN:</strong> বাংলাদেশে উৎসব মানে আনন্দ ও ঐক্য। ঈদ, দুর্গাপূজা, পহেলা বৈশাখ সব ধর্ম ও অঞ্চলের মানুষকে একত্র করে। মেলা, গান, ও খাবারের মাধ্যমে উৎসব প্রাণ পায়। এইসব উৎসব ধর্মীয় সহনশীলতা ও সংস্কৃতির পরিচয় বহন করে।
+        </span>
+        <a href="/History/home.html">click For More Information</a>
+        <button class="read-more-btn" onclick="toggleText(this)">See More</button>
+      </p>
+    </div>
+
+    <!-- Seasons Section -->
+    <div class="info-box season-box">
+      <h3>Seasons / ঋতু</h3>
+      <img src="images/destination/sea.jpg" alt="Season Image">
+      <p class="read-more-text">
+        <span class="short-text">
+          <strong>EN:</strong> Bangladesh enjoys six seasons with unique charm...<br>
+          <strong>BN:</strong> বাংলাদেশের ছয়টি ঋতুর রয়েছে আলাদা রূপ...
+        </span>
+        <span class="full-text hidden">
+          <strong>EN:</strong> Bangladesh experiences six distinct seasons: summer, monsoon, autumn, late autumn, winter, and spring. Each brings its own beauty and character — from lush rains and blooming flowers to foggy mornings and harvest festivals. These seasonal transitions shape rural life, agricultural rhythms, and cultural traditions.<br>
+          <strong>BN:</strong> বাংলাদেশে ছয়টি ঋতু রয়েছে: গ্রীষ্ম, বর্ষা, শরৎ, হেমন্ত, শীত এবং বসন্ত। প্রতিটি ঋতু নিজস্ব সৌন্দর্য ও বৈশিষ্ট্য নিয়ে আসে। গ্রামের জীবন, কৃষিকাজ ও উৎসবগুলো এসব ঋতুর ছোঁয়ায় গঠিত হয়।
+        </span>
+        <a href="season/season.php">click For More Information</a>
+        <button class="read-more-btn" onclick="toggleText(this)">See More</button>
+      </p>
+    </div>
+
+    <!-- Sports Section -->
+    <div class="info-box sports-box">
+      <h3>Sports / খেলা</h3>
+      <img src="images/destination/kabadi.jpg" alt="Sports Image">
+      <p class="read-more-text">
+        <span class="short-text">
+          <strong>EN:</strong> Sports, especially cricket, are a national passion...<br>
+          <strong>BN:</strong> খেলাধুলা, বিশেষ করে ক্রিকেট, জাতীয় আবেগ...
+        </span>
+        <span class="full-text hidden">
+          <strong>EN:</strong> Bangladeshis are passionate about sports, with cricket being the most popular. The national cricket team enjoys wide support. Football, kabaddi, and traditional games also hold significance. Kabaddi, also known as Ha-du-du, is the national sport of Bangladesh and reflects rural vibrancy. Sporting events inspire national pride and bring communities together.<br>
+          <strong>BN:</strong> বাংলাদেশে খেলাধুলার প্রতি মানুষের প্রবল আগ্রহ রয়েছে। ক্রিকেট সবচেয়ে জনপ্রিয়। জাতীয় দল সবার প্রিয়। ফুটবল, কাবাডি ও ঐতিহ্যবাহী খেলাগুলোরও গুরুত্ব আছে। কাবাডি, যা হাডুডু নামে পরিচিত, বাংলাদেশের জাতীয় খেলা এবং এটি গ্রামের প্রাণবন্ততার প্রতিচ্ছবি। এসব খেলা জাতীয় ঐক্য ও গর্বের প্রতীক।
+        </span>
+        <a href="Sports/Index.html">click For More Information</a>
+        <button class="read-more-btn" onclick="toggleText(this)">See More</button>
+      </p>
+    </div>
+
+
+    <!-- Rivers Section -->
+    <div class="info-box rivers-box">
+      <h3>Rivers / নদী</h3>
+      <img src="images/destination/river.jpg" alt="River Image">
+      <p class="read-more-text">
+        <span class="short-text">
+          <strong>EN:</strong> Rivers shape Bangladesh’s geography and life...<br>
+          <strong>BN:</strong> নদী বাংলাদেশের জীবনধারার অংশ...
+        </span>
+        <span class="full-text hidden">
+          <strong>EN:</strong> Rivers are vital to Bangladesh’s identity. The Ganges, Brahmaputra, and Meghna form the world’s largest delta. Rivers support agriculture, transport, and daily life. Floods, erosion, and riverine beauty are part of the nation’s environmental and cultural narrative.<br>
+          <strong>BN:</strong> নদী বাংলাদেশের ভূগোল ও জীবনের অবিচ্ছেদ্য অংশ। পদ্মা, যমুনা, মেঘনা মিলে গঠিত বিশ্বের বৃহত্তম ব-দ্বীপ। নদীর সঙ্গে দেশের কৃষি, পরিবহন, সংস্কৃতি ও জীবনযাত্রা ওতপ্রোতভাবে জড়িত।
+        </span>
+        <a href="/History/home.html">click For More Information</a>
+        <button class="read-more-btn" onclick="toggleText(this)">See More</button>
+      </p>
+    </div>
+
+    <!-- Politics Section -->
+    <div class="info-box politics-box">
+      <h3>Politics / রাজনীতি</h3>
+      <img src="images/destination/pol.jpg" alt="Politics Image">
+      <p class="read-more-text">
+        <span class="short-text">
+          <strong>EN:</strong> Politics is vibrant and sometimes intense...<br>
+          <strong>BN:</strong> রাজনীতি বাংলাদেশের সমাজে গুরুত্বপূর্ণ...
+        </span>
+        <span class="full-text hidden">
+          <strong>EN:</strong> Politics in Bangladesh plays a crucial role in shaping national policy and governance. The nation follows a parliamentary system with competitive elections. Political movements, democracy, and youth involvement have always been dynamic. Political awareness is high among citizens.<br>
+          <strong>BN:</strong> বাংলাদেশে রাজনীতি জাতীয় নীতিনির্ধারণ ও শাসনব্যবস্থায় গুরুত্বপূর্ণ ভূমিকা রাখে। সংসদীয় পদ্ধতিতে নির্বাচন অনুষ্ঠিত হয়। রাজনৈতিক আন্দোলন ও গণতন্ত্রের ধারা বরাবরই সক্রিয়। নাগরিকদের মধ্যে রাজনৈতিক সচেতনতা তুলনামূলকভাবে বেশি।
+        </span>
+          <a href="political.php">More details</a>
+        <button class="read-more-btn" onclick="toggleText(this)">See More</button>
+      </p>
+    </div>
+
+  </div>
+</div>
+
+
+  <!-- Face of the Magazine Section -->
+
+<section class="face-section">
+    <div class="face-container">
+      <h2 class="face-heading">Face of the Magazine</h2>
+
+      <div class="face-image-wrapper">
+        <img src="admin.png" 
+             alt="Face of the Magazine" 
+             class="face-image" />
+        <div class="face-overlay">
+          SHE shared the idea how we can convert <span style="font-weight: bold;">মৃৎশিল্প</span> to modern art —<br>
+          A true blend of root culture and future vision. 🌍✨
+        </div>
+      </div>
+
+      <div class="face-text">
+        <h1>Read the best artical of the week <a href="mud.html">মৃৎশিল্প To MODERN ART</a></h1>
+        💭 <em>Shape Your Soul</em> magazine চায় তোমার ভাবনাও শুনতে —<br />
+        <span>Share your thought:</span> How can our root culture rule the modern world? Sent your idea to us and we will select the best one.
+      </div>
+    </div>
+  </section>
+
+<!-- Sponsors Section -->
+<section class="sponsors-section">
+  <h2 class="sponsors-heading">Sponsors</h2>
+  <div class="sponsors-grid">
+    <div class="sponsor">
+      <img src="root.png" alt="Company 1">
+      <a href="http://localhost/wt/season/projectdone/">rootBD.com</a>
+    </div>
+    <div class="sponsor">
+      <img src="https://tse1.mm.bing.net/th?id=OIP.Lx1hhcWdsPTpMARhuEOP1AHaE7&pid=Api&P=0&h=220" alt="Company 2">
+      <a href="http://localhost/wt/season/projectdone/">eBangla.com</a>
+    </div>
+   
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="about">
+      <h2>About Us</h2>
+       <footer>
+          <a href="https://www.facebook.com/"><img src="images/logo/facebook.png" height="25px" width="25px"></a>
+          <a href="https://www.instagram.com/"><img src="images/logo/instagram.png" height="25px" width="25px"></a>
+          <a href="https://twitter.com/"><img src="images/logo/twitter.png" height="25px" width="25px"></a>
+          <p><b>Posted by: Labonno Rahman</b></p>
+       </footer>
+    </div>
+
+
+
+<script>
+window.onload = function () {
+  // Image list
+  const adImages = [
+    "images/destination/ad.jpg",
+    "images/destination/grrrr.jpg",
+    "images/destination/handmade.jpg"
+  ];
+
+  let currentAdIndex = 0;
+  const adImageElement = document.getElementById("adImage");
+
+  // Function to switch image every 3 seconds
+  function changeAd() {
+    currentAdIndex = (currentAdIndex + 1) % adImages.length;
+    adImageElement.src = adImages[currentAdIndex];
+  }
+
+  // Start changing every 3 seconds (3000ms)
+  const adInterval = setInterval(changeAd, 1000);
+
+  // Close ad banner
+  window.closeAd = function () {
+    const adBanner = document.getElementById("adBanner");
+    adBanner.style.display = "none";
+    clearInterval(adInterval);
+  };
+};
+</script>
+
+  </body>
+</html>
+

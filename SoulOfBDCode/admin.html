@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Oishy's Portfolio</title>
+  <style>
+    /* Reset & base */
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f0f0f0;
+      perspective: 1000px;
+      color: #333;
+    }
+
+    nav {
+      background-color: #333;
+      color: white;
+      padding: 10px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 99;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      cursor: pointer;
+      user-select: none;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #00a86b;
+    }
+
+    .book-container {
+      width: 90%;
+      max-width: 900px;
+      margin: 40px auto 80px;
+      position: relative;
+      transform-style: preserve-3d;
+      transition: transform 1s;
+      min-height: 550px;
+      perspective: 1500px;
+    }
+
+    .page-card {
+      width: 100%;
+      min-height: 500px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform-origin: left;
+      transform-style: preserve-3d;
+      transition: transform 1s, z-index 0.5s;
+      border-radius: 10px;
+      box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+      padding: 30px;
+      box-sizing: border-box;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    /* Background colors for each page */
+    #page-1 { background: #e3f6f5; } /* light cyan */
+    #page-2 { background: #ffe066; } /* mellow yellow */
+    #page-3 { background: #dbe7e4; } /* light grayish blue */
+    #page-4 { background: #ffb4a2; } /* warm coral */
+    #page-5 { background: #a0ced9; } /* soft blue */
+
+    /* Intro page */
+    .intro-section {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .intro-section img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      transition: transform 0.5s ease;
+      object-fit: cover;
+      flex-shrink: 0;
+    }
+
+    .intro-section img:hover {
+      transform: scale(1.1) rotate(5deg);
+    }
+
+    /* Buttons */
+    .btn {
+      align-self: flex-end;
+      padding: 10px 25px;
+      cursor: pointer;
+      border: none;
+      background-color: #007f5f;
+      color: white;
+      border-radius: 5px;
+      font-size: 1rem;
+      transition: background-color 0.3s;
+      margin-top: 20px;
+      user-select: none;
+    }
+
+    .btn:hover {
+      background-color: #005f43;
+    }
+
+    /* Education cards container */
+    .education-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .edu-card {
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 320px;
+      text-align: center;
+      transition: transform 0.3s ease;
+    }
+
+    .edu-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    }
+
+    .edu-card h3 {
+      margin-bottom: 15px;
+      color: #007f5f;
+      font-size: 1.2rem;
+    }
+
+    .edu-card img {
+      width: 100%;
+      max-height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 15px;
+      flex-shrink: 0;
+    }
+
+    .edu-card p {
+      font-size: 0.9rem;
+      color: #555;
+      margin-top: auto;
+    }
+
+    /* Headings for education categories */
+    .edu-section {
+      margin-top: 30px;
+    }
+    .edu-section h2 {
+      border-bottom: 3px solid #007f5f;
+      padding-bottom: 8px;
+      margin-bottom: 15px;
+      font-size: 1.5rem;
+      color: #004d40;
+    }
+
+    /* Responsive for smaller screens */
+    @media (max-width: 600px) {
+      .intro-section {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .intro-section img {
+        width: 120px;
+        height: 120px;
+      }
+
+      .btn {
+        width: 100%;
+        font-size: 1.1rem;
+      }
+
+      .book-container {
+        width: 95%;
+        min-height: 600px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="mainPage.html">GoTo HomePage</a>
+    <a onclick="goToPage(1)">Admin</a>
+    <a onclick="goToPage(2)">About</a>
+    <a onclick="goToPage(3)">Education</a>
+    <a onclick="goToPage(4)">Hometown</a>
+    <a onclick="goToPage(5)">Contact</a>
+  </nav>
+
+  <div class="book-container">
+    <!-- Page 1: Intro -->
+    <div class="page-card" id="page-1">
+      <div class="page-content">
+        <div class="intro-section">
+          <img src="admin.png" alt="Oishy's Photo" />
+          <div>
+            <h2>Mst. Labonno Rahman Oishy</h2>
+            <p>Currently pursuing BSc in Information and Communication Engineering (ICE) at BUP. Passionate about technology, communication, and innovation. From Haluaghat, Mymensingh.</p>
+          </div>
+        </div>
+        <button class="btn" onclick="goToPage(2)">Wanna Know About Me? →</button>
+      </div>
+    </div>
+
+    <!-- Page 2: About -->
+    <div class="page-card" id="page-2">
+      <div class="page-content">
+        <h2>📖 About Me</h2>
+        <p>Hey, I'm Oishy — a curious mind and a tech enthusiast who thrives on creativity and purpose. I'm currently a 3rd year, 2nd semester student at Bangladesh University of Professionals (BUP), studying Information and Communication Engineering (ICE). Life at BUP has been a blend of academic rigor, inspiring people, and a constant push to evolve.</p>
+        
+        <p>I grew up in Haluaghat, surrounded by serene hills and nature, which deeply shaped my perspective — calm, grounded, but always reaching for something bigger. That balance between roots and ambition defines me.</p>
+
+        <p><strong>✨ What drives me:</strong> Solving real-world problems through tech. I’m passionate about coding, UI/UX, app development, and anything that improves human experiences through digital interfaces. Whether it’s a chatbot powered by AI or a mobile app that uplifts mood — I’m in.</p>
+
+        <p><strong>🎯 My goals:</strong> To become a dynamic developer and tech leader who not only builds apps but impacts lives. I'm working toward mastering full-stack development, AI integration, and user-centered design.</p>
+
+        <p><strong>⚡ Fun facts:</strong> I love designing beautiful interfaces, exploring Bengali culture through tech, and journaling my thoughts (digitally and emotionally). You'll often find me sketching ideas for apps or crafting digital stories with code.</p>
+
+        <p>This journey is just beginning, and I'm always excited to connect, collaborate, and create something meaningful. Let's build the future — one line of code at a time.</p>
+        <button class="btn" onclick="goToPage(3)">My Education →</button>
+      </div>
+    </div>
+
+    <!-- Page 3: Education -->
+    <div class="page-card" id="page-3">
+      <div class="page-content">
+        <h2>🏫 My Education</h2>
+
+        <div class="edu-section">
+          <h2>School</h2>
+          <div class="education-cards">
+            <div class="edu-card">
+              <img src="https://i.ytimg.com/vi/DubThaqwdZ8/maxresdefault.jpg" alt="Savar Adhar Chandra School" />
+              <h3>Savar Adhar Chandra School</h3>
+              <p>Primary education</p>
+            </div>
+            <div class="edu-card">
+              <img src="https://childheavenschool.com/wp-content/uploads/2022/10/Boi-Utshob-scaled.jpg" alt="Child Heaven School" />
+              <h3>Child Heaven School</h3>
+              <p>Primary education</p>
+            </div>
+            <div class="edu-card">
+              <img src="https://tse1.mm.bing.net/th?id=OIP.9-QF13c-i0GG5GSUSjA-qQHaFj&pid=Api&P=0&h=220" alt="Sobujmela Primary School" />
+              <h3>Sobujmela Primary School</h3>
+              <p>Primary education</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="edu-section">
+          <h2>High School</h2>
+          <div class="education-cards">
+            <div class="edu-card">
+              <img src="https://tse2.mm.bing.net/th?id=OIP.msHAKXM23MKS7vYjgbJ10AHaDt&pid=Api&P=0&h=220" alt="Ambition Residential School" />
+              <h3>Ambition Residential School</h3>
+              <p>Junior School</p>
+            </div>
+            <div class="edu-card">
+              <img src="https://tse3.mm.bing.net/th?id=OIP.jnsG3Bp76kaaBWVCAD8IMgHaFj&pid=Api&P=0&h=220" alt="Phulpur Girls High School" />
+              <h3>Phulpur Girls High School</h3>
+              <p>High School</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="edu-section">
+          <h2>College</h2>
+          <div class="education-cards">
+            <div class="edu-card">
+              <img src="https://blog.allbanglanewspaper.co/wp-content/uploads/5-Muminunnisa-Government-Womens-College.jpg" alt="Muminunnisa Women's College" />
+              <h3>Muminunnisa Women's College</h3>
+              <p>Passed HSC</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="edu-section">
+          <h2>University</h2>
+          <div class="education-cards">
+            <div class="edu-card">
+              <img src="https://i.ytimg.com/vi/1OtBRadsW_Q/hqdefault.jpg" alt="Bangladesh University of Professionals (BUP)" />
+              <h3>Bangladesh University of Professionals (BUP)</h3>
+              <p>Dept. of ICT, ICE</p>
+            </div>
+          </div>
+        </div>
+
+        <button class="btn" onclick="goToPage(4)">Home Town →</button>
+      </div>
+    </div>
+
+    <!-- Page 4: Hometown -->
+    <div class="page-card" id="page-4">
+      <div class="page-content">
+        <h2>🏡 My Hometown</h2>
+        <p>I am from Haluaghat, a beautiful upazila in Mymensingh district known for its natural beauty, hills, and tea gardens. Growing up here has given me a deep connection to nature and a sense of community.</p>
+
+        <div style="display: flex; gap: 15px; flex-wrap: wrap; margin-top: 15px;">
+          <img src="https://1.bp.blogspot.com/-x8WZlJEA--w/VvQWjYEkNgI/AAAAAAAADgE/NiuJR8pSS14Z0ymyYsO0E6Mzwz_5sEf7g/s1600/Shomeshwari_River_05_626308851.jpg" alt="Haluaghat Landscape" style="flex: 1; max-width: 32%; border-radius: 10px; object-fit: cover; height: 200px;" />
+          <img src="https://i.ytimg.com/vi/OXiYgRpqDPw/maxresdefault.jpg" alt="Haluaghat Hills" style="flex: 1; max-width: 32%; border-radius: 10px; object-fit: cover; height: 200px;" />
+          <img src="https://assets.telegraphindia.com/telegraph/3f91bc61-9a1d-40e9-8531-34b34c076717.jpg" alt="Tea Gardens in Haluaghat" style="flex: 1; max-width: 32%; border-radius: 10px; object-fit: cover; height: 200px;" />
+        </div>
+
+        <button class="btn" onclick="goToPage(5)">Contact Info →</button>
+      </div>
+    </div>
+
+    <!-- Page 5: Contact -->
+    <div class="page-card" id="page-5">
+      <div class="page-content">
+        <h2>📞 Contact Info</h2>
+        <p><strong>Location:</strong> Haluaghat, Mymensingh</p>
+        <p><strong>Email:</strong> oishylabonna@gmail.com</p>
+        <p><strong>Phone:</strong> +8801712472648</p>
+        <button class="btn" onclick="goToPage(1)">← Go to Start</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function flipPage(targetPage) {
+      const pages = document.querySelectorAll('.page-card');
+      pages.forEach((page, index) => {
+        if (index + 1 < targetPage) {
+          page.style.transform = 'rotateY(-180deg)';
+          page.style.zIndex = 1;
+        } else {
+          page.style.transform = 'rotateY(0deg)';
+          page.style.zIndex = 5 - (index + 1 - targetPage);
+        }
+      });
+    }
+
+    function goToPage(pageNum) {
+      flipPage(pageNum);
+    }
+
+    window.onload = () => {
+      flipPage(1);
+    };
+  </script>
+</body>
+</html>

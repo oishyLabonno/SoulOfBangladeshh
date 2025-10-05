@@ -1,0 +1,1181 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="বাংলাদেশের শিক্ষার্থীদের জন্য বইয়ের সংগ্রহ - ক্লাস ১ থেকে ১২ পর্যন্ত সকল পাঠ্যবই ও সহায়ক বই">
+  <title>বাংলাদেশের শিক্ষার্থীদের জন্য বইয়ের সংগ্রহ</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+/* ===== CSS VARIABLES ===== */
+:root {
+  /* Colors */
+  --primary-blue: #1e3c72;
+  --secondary-blue: #2a5298;
+  --light-blue: #c3cfe2;
+  --very-light-blue: #f5f7fa;
+  --white: #ffffff;
+  --dark-gray: #333333;
+  --medium-gray: #666666;
+  --light-gray: #dddddd;
+  --footer-bg: #2c3e50;
+  --footer-text: #ecf0f1;
+  --footer-accent: #3498db;
+  --footer-dark: #34495e;
+  --footer-light: #95a5a6;
+  
+  /* Typography */
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --font-weight-normal: 400;
+  --font-weight-medium: 600;
+  --font-weight-bold: 700;
+  
+  /* Spacing */
+  --space-xs: 0.5rem;
+  --space-sm: 1rem;
+  --space-md: 1.5rem;
+  --space-lg: 2rem;
+  --space-xl: 3rem;
+  
+  /* Border Radius */
+  --border-radius-sm: 6px;
+  --border-radius-md: 12px;
+  --border-radius-lg: 50px;
+  
+  /* Shadows */
+  --shadow-light: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --shadow-medium: 0 6px 15px rgba(0, 0, 0, 0.1);
+  --shadow-heavy: 0 12px 25px rgba(0, 0, 0, 0.15);
+  --shadow-extra: 0 4px 12px rgba(0, 0, 0, 0.1);
+  
+  /* Transitions */
+  --transition-fast: 0.3s ease;
+  --transition-medium: 0.5s ease;
+  
+  /* Z-index */
+  --z-low: 10;
+  --z-medium: 100;
+  --z-high: 1000;
+}
+
+/* ===== BASE STYLES ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, var(--very-light-blue) 0%, var(--light-blue) 100%);
+  color: var(--dark-gray);
+  font-family: var(--font-family);
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== HEADER STYLES ===== */
+header {
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+  color: var(--white);
+  text-align: center;
+  padding: var(--space-lg) var(--space-sm);
+  box-shadow: var(--shadow-extra);
+  position: relative;
+  overflow: hidden;
+}
+
+header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.1)"/></svg>');
+  background-size: cover;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: var(--space-xs);
+  position: relative;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+header p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  position: relative;
+}
+
+/* ===== MAIN CONTENT ===== */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: var(--space-lg) var(--space-sm);
+  flex: 1;
+}
+
+/* ===== CATEGORY TABS ===== */
+.category-tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-lg);
+}
+
+.tab-btn {
+  background: var(--white);
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: var(--border-radius-lg);
+  font-size: 1rem;
+  font-weight: var(--font-weight-bold);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  box-shadow: var(--shadow-light);
+  color: var(--secondary-blue);
+  position: relative;
+  overflow: hidden;
+}
+
+.tab-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+  transition: left var(--transition-medium);
+}
+
+.tab-btn:hover::before {
+  left: 100%;
+}
+
+.tab-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.tab-btn.active {
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== CATEGORY CONTENT ===== */
+.category-content {
+  display: none;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.category-content.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from { 
+    opacity: 0; 
+    transform: translateY(20px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
+
+.category-content h2 {
+  text-align: center;
+  margin-bottom: var(--space-lg);
+  color: var(--primary-blue);
+  font-size: 2rem;
+  position: relative;
+  padding-bottom: var(--space-xs);
+}
+
+.category-content h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-blue), var(--secondary-blue));
+  border-radius: 2px;
+}
+
+/* ===== BOOKS CONTAINER ===== */
+.books-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--space-lg);
+  margin-bottom: var(--space-xl);
+}
+
+/* ===== BOOK CARD ===== */
+.book-card {
+  background: var(--white);
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-medium);
+  transition: all var(--transition-fast);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.book-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-heavy);
+}
+
+.book-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, var(--primary-blue), var(--secondary-blue));
+}
+
+.book-image {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-medium);
+}
+
+.book-card:hover .book-image {
+  transform: scale(1.05);
+}
+
+.book-content {
+  padding: var(--space-md);
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.book-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: var(--space-xs);
+  color: var(--primary-blue);
+  line-height: 1.4;
+}
+
+.book-card p {
+  color: var(--medium-gray);
+  margin-bottom: var(--space-sm);
+  font-size: 0.95rem;
+}
+
+.book-links {
+  display: flex;
+  gap: 0.8rem;
+  margin-top: auto;
+}
+
+.book-links a {
+  flex: 1;
+  text-align: center;
+  padding: 0.7rem 0;
+  border-radius: var(--border-radius-sm);
+  text-decoration: none;
+  font-weight: var(--font-weight-bold);
+  transition: all var(--transition-fast);
+  position: relative;
+  overflow: hidden;
+}
+
+.read-btn {
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+  color: var(--white);
+}
+
+.download-btn {
+  background: var(--white);
+  color: var(--primary-blue);
+  border: 2px solid var(--primary-blue);
+}
+
+.book-links a::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left var(--transition-medium);
+}
+
+.book-links a:hover::before {
+  left: 100%;
+}
+
+.read-btn:hover {
+  background: linear-gradient(135deg, var(--secondary-blue) 0%, var(--primary-blue) 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.download-btn:hover {
+  background: var(--primary-blue);
+  color: var(--white);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== ADDITIONAL RESOURCES ===== */
+#additionalResources {
+  margin-top: var(--space-xl);
+  padding-top: var(--space-lg);
+  border-top: 1px solid var(--light-gray);
+}
+
+#additionalResources h2 {
+  text-align: center;
+  margin-bottom: var(--space-lg);
+  color: var(--primary-blue);
+  font-size: 2rem;
+  position: relative;
+  padding-bottom: var(--space-xs);
+}
+
+#additionalResources h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-blue), var(--secondary-blue));
+  border-radius: 2px;
+}
+
+.resources-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--space-lg);
+}
+
+.resource-card {
+  background: var(--white);
+  border-radius: var(--border-radius-md);
+  padding: var(--space-lg);
+  text-align: center;
+  box-shadow: var(--shadow-medium);
+  transition: all var(--transition-fast);
+  position: relative;
+  overflow: hidden;
+}
+
+.resource-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 5px;
+  background: linear-gradient(90deg, var(--primary-blue), var(--secondary-blue));
+}
+
+.resource-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-heavy);
+}
+
+.resource-card h3 {
+  font-size: 1.5rem;
+  margin-bottom: var(--space-sm);
+  color: var(--primary-blue);
+}
+
+.resource-card p {
+  color: var(--medium-gray);
+  margin-bottom: var(--space-md);
+}
+
+.visit-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+  color: var(--white);
+  padding: 0.8rem 1.5rem;
+  border-radius: var(--border-radius-lg);
+  text-decoration: none;
+  font-weight: var(--font-weight-bold);
+  transition: all var(--transition-fast);
+  position: relative;
+  overflow: hidden;
+}
+
+.visit-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+  transition: left var(--transition-medium);
+}
+
+.visit-btn:hover::before {
+  left: 100%;
+}
+
+.visit-btn:hover {
+  background: linear-gradient(135deg, var(--secondary-blue) 0%, var(--primary-blue) 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== GOOGLE TRANSLATE WIDGET ===== */
+#googleTranslateElement {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: var(--z-high);
+}
+
+/* ===== FOOTER STYLES ===== */
+.footer {
+  background-color: var(--footer-bg);
+  color: var(--footer-text);
+  padding: 40px 20px 20px;
+  margin-top: auto;
+}
+
+.social-section {
+  text-align: center;
+  margin-top: 30px;
+  width: 100%;
+}
+
+.social-section h3 {
+  color: var(--footer-text);
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background-color: var(--footer-dark);
+  border-radius: 50%;
+  transition: all var(--transition-fast);
+  box-shadow: var(--shadow-light);
+}
+
+.social-link:hover {
+  transform: translateY(-5px);
+  background-color: var(--footer-accent);
+}
+
+.social-link img {
+  width: 24px;
+  height: 24px;
+  filter: brightness(0) invert(1);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  text-align: center;
+  padding-top: 20px;
+  border-top: 1px solid var(--footer-dark);
+  color: var(--footer-light);
+  font-size: 0.9rem;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Tablet and Mobile Styles */
+@media (max-width: 768px) {
+  /* Header adjustments */
+  header h1 {
+    font-size: 2rem;
+  }
+  
+  /* Category tabs layout */
+  .category-tabs {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .tab-btn {
+    width: 100%;
+    max-width: 300px;
+  }
+  
+  /* Books container adjustments */
+  .books-container {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  }
+  
+  /* Google translate positioning */
+  #googleTranslateElement {
+    position: static;
+    text-align: center;
+    margin-bottom: var(--space-sm);
+  }
+  
+  /* Social links adjustments */
+  .social-links {
+    gap: 15px;
+  }
+  
+  .social-link {
+    width: 45px;
+    height: 45px;
+  }
+}
+
+/* Mobile Styles */
+@media (max-width: 480px) {
+  /* Single column layout for books */
+  .books-container {
+    grid-template-columns: 1fr;
+  }
+  
+  /* Stack book links vertically */
+  .book-links {
+    flex-direction: column;
+  }
+  
+  /* Adjust spacing for mobile */
+  .category-content h2,
+  #additionalResources h2 {
+    font-size: 1.5rem;
+  }
+  
+  header h1 {
+    font-size: 1.8rem;
+  }
+  
+  header p {
+    font-size: 1rem;
+  }
+}
+
+/* Large screen adjustments */
+@media (min-width: 1200px) {
+  .books-container {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
+}
+
+/* High DPI screen optimizations */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .book-image {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* Print styles */
+@media print {
+  .tab-btn,
+  .book-links,
+  .visit-btn,
+  .footer,
+  #googleTranslateElement {
+    display: none !important;
+  }
+  
+  .book-card {
+    break-inside: avoid;
+    box-shadow: none;
+    border: 1px solid var(--light-gray);
+  }
+  
+  .category-content {
+    display: block !important;
+  }
+}
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 1.5rem;
+}
+
+
+.nav-menu a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+
+.nav-menu a::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #fdbb2d;
+  transition: width 0.3s ease;
+}
+
+
+.nav-menu a:hover::before {
+  width: 100%;
+}
+
+
+.nav-menu a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+  </style>
+</head>
+<body>
+  <!-- Header with Navigation -->
+  <header role="banner">
+    <ul class="nav-menu">
+      <li><a href="Education.html">পূর্ববর্তী পৃষ্ঠা</a></li>
+        <li><div id="googleTranslateElement" role="complementary" aria-label="ভাষা অনুবাদকারী"></div></li>
+    </ul>
+
+    <h1>বাংলাদেশের শিক্ষার্থীদের জন্য বইয়ের সংগ্রহ</h1>
+    <p>ক্লাস ১ থেকে ১২ পর্যন্ত সকল পাঠ্যবই ও সহায়ক বই</p>
+    
+  </header>
+
+  <main>
+    <!-- Book Categories Section -->
+    <section id="bookCategories" aria-labelledby="book-categories-heading">
+      <div class="category-tabs" role="tablist" aria-label="বইয়ের বিভাগসমূহ">
+        <button class="tab-btn active" 
+                role="tab" 
+                aria-selected="true" 
+                aria-controls="primaryContent"
+                onclick="openCategory('primaryContent', this)">
+          প্রাথমিক (১-৫)
+        </button>
+        <button class="tab-btn" 
+                role="tab" 
+                aria-selected="false" 
+                aria-controls="juniorContent"
+                onclick="openCategory('juniorContent', this)">
+          নিম্ন মাধ্যমিক (৬-৮)
+        </button>
+        <button class="tab-btn" 
+                role="tab" 
+                aria-selected="false" 
+                aria-controls="secondaryContent"
+                onclick="openCategory('secondaryContent', this)">
+          মাধ্যমিক (৯-১০)
+        </button>
+        <button class="tab-btn" 
+                role="tab" 
+                aria-selected="false" 
+                aria-controls="higherSecondaryContent"
+                onclick="openCategory('higherSecondaryContent', this)">
+          উচ্চ মাধ্যমিক (১১-১২)
+        </button>
+      </div>
+
+      <!-- Primary Books -->
+      <article id="primaryContent" class="category-content active" role="tabpanel" aria-labelledby="primary-heading">
+        <h2 id="primary-heading">প্রাথমিক স্তরের বই (ক্লাস ১-৫)</h2>
+        <div class="books-container">
+          <section class="book-card">
+            <img src="https://imgcdn.sohopathi.com/wp-content/uploads/2018/06/amar-bangla-boi.jpg?strip=all&lossy=1&ssl=1" 
+                 alt="আমার বাংলা বই - ক্লাস ১" 
+                 class="book-image">
+            <div class="book-content">
+              <h3>আমার বাংলা বই</h3>
+              <p>ক্লাস: ১</p>
+              <div class="book-links">
+                <a href="https://drive.google.com/file/d/1XFeh1kDvWoBtYza8jft5cwrPVhEcseD5/view" 
+                   target="_blank" 
+                   class="read-btn"
+                   aria-label="আমার বাংলা বই পড়ুন">
+                  পড়ুন
+                </a>
+                <a href="https://drive.google.com/uc?export=download&id=1XFeh1kDvWoBtYza8jft5cwrPVhEcseD5" 
+                   download 
+                   class="download-btn"
+                   aria-label="আমার বাংলা বই ডাউনলোড করুন">
+                  ডাউনলোড
+                </a>
+              </div>
+            </div>
+          </section>
+
+          <section class="book-card">
+            <img src="https://imgv2-2-f.scribdassets.com/img/document/630627610/original/143ab9613b/1703314156?v=1" 
+                 alt="English for Today - ক্লাস ২" 
+                 class="book-image">
+            <div class="book-content">
+              <h3>English for Today</h3>
+              <p>ক্লাস: ২</p>
+              <div class="book-links">
+                <a href="https://drive.google.com/file/d/1fEi4o-cRb-uIuXb0YllOylOLwPKg9003/view" 
+                   target="_blank" 
+                   class="read-btn"
+                   aria-label="English for Today পড়ুন">
+                  পড়ুন
+                </a>
+                <a href="https://drive.google.com/uc?export=download&id=1fEi4o-cRb-uIuXb0YllOylOLwPKg9003" 
+                   download 
+                   class="download-btn"
+                   aria-label="English for Today ডাউনলোড করুন">
+                  ডাউনলোড
+                </a>
+              </div>
+            </div>
+          </section>
+
+          <section class="book-card">
+            <img src="https://www.sohopathi.com/wp-content/uploads/2018/07/General-Math-Class-3.jpg" 
+                 alt="প্রাথমিক গণিত - ক্লাস ৩" 
+                 class="book-image">
+            <div class="book-content">
+              <h3>প্রাথমিক গণিত</h3>
+              <p>ক্লাস: ৩</p>
+              <div class="book-links">
+                <a href="https://drive.google.com/file/d/1LDc6xGN3dHgKDp5L5mnbAm3ltAf5f-iI/view" 
+                   target="_blank" 
+                   class="read-btn"
+                   aria-label="প্রাথমিক গণিত পড়ুন">
+                  পড়ুন
+                </a>
+                <a href="https://drive.google.com/uc?export=download&id=1LDc6xGN3dHgKDp5L5mnbAm3ltAf5f-iI" 
+                   download 
+                   class="download-btn"
+                   aria-label="প্রাথমিক গণিত ডাউনলোড করুন">
+                  ডাউনলোড
+                </a>
+              </div>
+            </div>
+          </section>
+
+          <section class="book-card">
+            <img src="https://allboi.com/wp-content/uploads/2023/01/Class-4-Science-Book.jpg" 
+                 alt="প্রাথমিক বিজ্ঞান - ক্লাস ৪" 
+                 class="book-image">
+            <div class="book-content">
+              <h3>প্রাথমিক বিজ্ঞান</h3>
+              <p>ক্লাস: ৪</p>
+              <div class="book-links">
+                <a href="https://drive.google.com/file/d/1flCVO1GLy49bjuT8KabGVk_0tJSIhiSW/view" 
+                   target="_blank" 
+                   class="read-btn"
+                   aria-label="প্রাথমিক বিজ্ঞান পড়ুন">
+                  পড়ুন
+                </a>
+                <a href="https://drive.google.com/uc?export=download&id=1flCVO1GLy49bjuT8KabGVk_0tJSIhiSW" 
+                   download 
+                   class="download-btn"
+                   aria-label="প্রাথমিক বিজ্ঞান ডাউনলোড করুন">
+                  ডাউনলোড
+                </a>
+              </div>
+            </div>
+          </section>
+        </div>
+      </article>
+
+      <!-- Junior Books -->
+      <article id="juniorContent" class="category-content" role="tabpanel" aria-labelledby="junior-heading">
+        <h2 id="junior-heading">নিম্ন মাধ্যমিক স্তরের বই (ক্লাস ৬-৮)</h2>
+        <div class="books-container">
+          <section class="book-card">
+            <img src="images/ImageN/bn6.png" 
+                 alt="বাংলা সাহিত্য - ক্লাস ৬" 
+                 class="book-image">
+            <div class="book-content">
+              <h3>বাংলা সাহিত্য</h3>
+              <p>ক্লাস: ৬</p>
+              <div class="book-links">
+                <a href="https://drive.google.com/file/d/1HMLLnPvoFbwdLUYOyuOYKkuTma6oI0gD/view" 
+                   target="_blank" 
+                   class="read-btn"
+                   aria-label="বাংলা সাহিত্য পড়ুন">
+                  পড়ুন
+                </a>
+                <a href="https://drive.google.com/uc?export=download&id=1HMLLnPvoFbwdLUYOyuOYKkuTma6oI0gD" 
+                   download 
+                   class="download-btn"
+                   aria-label="বাংলা সাহিত্য ডাউনলোড করুন">
+                  ডাউনলোড
+                </a>
+              </div>
+            </div>
+          </section>
+
+          <section class="book-card">
+            <img src="https://www.sohopathi.com/wp-content/uploads/2022/08/English-Grammar-and-Composition-Dakhil-class-7.png" 
+                 alt="English Grammar & Composition - ক্লাস ৭" 
+                 class="book-image">
+            <div class="book-content">
+              <h3>English Grammar & Composition</h3>
+              <p>ক্লাস: ৭</p>
+              <div class="book-links">
+                <a href="https://drive.google.com/file/d/1c4nytdegLYv9n-WkuJG3NvpZLfeoOMor/view" 
+                   target="_blank" 
+                   class="read-btn"
+                   aria-label="English Grammar & Composition পড়ুন">
+                  পড়ুন
+                </a>
+                <a href="https://drive.google.com/uc?export=download&id=1c4nytdegLYv9n-WkuJG3NvpZLfeoOMor" 
+                   download 
+                   class="download-btn"
+                   aria-label="English Grammar & Composition ডাউনলোড করুন">
+                  ডাউনলোড
+                </a>
+              </div>
+            </div>
+          </section>
+
+          <section class="book-card">
+            <img src="https://www.sohopathi.com/wp-content/uploads/2018/07/General-Math-Class-8.jpg" 
+                 alt="জুনিয়র গণিত - ক্লাস ৮" 
+                 class="book-image">
+            <div class="book-content">
+              <h3>জুনিয়র গণিত</h3>
+              <p>ক্লাস: ৮</p>
+              <div class="book-links">
+                <a href="https://drive.google.com/file/d/12w4BM04pLCEot2OFJH-9-FFo9-TxMouE/view" 
+                   target="_blank" 
+                   class="read-btn"
+                   aria-label="জুনিয়র গণিত পড়ুন">
+                  পড়ুন
+                </a>
+                <a href="https://drive.google.com/uc?export=download&id=12w4BM04pLCEot2OFJH-9-FFo9-TxMouE" 
+                   download 
+                   class="download-btn"
+                   aria-label="জুনিয়র গণিত ডাউনলোড করুন">
+                  ডাউনলোড
+                </a>
+              </div>
+            </div>
+          </section>
+        </div>
+      </article>
+
+      <!-- Secondary Books -->
+      <article id="secondaryContent" class="category-content" role="tabpanel" aria-labelledby="secondary-heading">
+        <h2 id="secondary-heading">মাধ্যমিক স্তরের বই (ক্লাস ৯-১০)</h2>
+        <div class="books-container">
+          <section class="book-card">
+            <img src="https://nctbbooks.com/static/d1826607b7f3072b8549f0e3d4f5ff8f/82ea0/1UBAMV-V5Jow-Ihp3bCI8G1sdTC6sAiQF_0.webp" 
+                 alt="বাংলা সাহিত্য - ক্লাস ৯" 
+                 class="book-image">
+            <div class="book-content">
+              <h3>বাংলা সাহিত্য</h3>
+              <p>ক্লাস: ৯</p>
+              <div class="book-links">
+                <a href="https://drive.google.com/file/d/1Oaq2f4GwfLhfcpN7wtHHCELR7ctpfGVq/view" 
+                   target="_blank" 
+                   class="read-btn"
+                   aria-label="বাংলা সাহিত্য পড়ুন">
+                  পড়ুন
+                </a>
+                <a href="https://drive.google.com/uc?export=download&id=1Oaq2f4GwfLhfcpN7wtHHCELR7ctpfGVq" 
+                   download 
+                   class="download-btn"
+                   aria-label="বাংলা সাহিত্য ডাউনলোড করুন">
+                  ডাউনলোড
+                </a>
+              </div>
+            </div>
+          </section>
+
+          <section class="book-card">
+            <img src="images/ImageN/math9.png" 
+                 alt="সাধারণ গণিত - ক্লাস ৯" 
+                 class="book-image">
+            <div class="book-content">
+              <h3>সাধারণ গণিত</h3>
+              <p>ক্লাস: ৯</p>
+              <div class="book-links">
+                <a href="https://drive.google.com/file/d/12E6qEgPnF9AwYDwRg24IYwfr8U82MnE5/view" 
+                   target="_blank" 
+                   class="read-btn"
+                   aria-label="সাধারণ গণিত পড়ুন">
+                  পড়ুন
+                </a>
+                <a href="https://drive.google.com/uc?export=download&id=12E6qEgPnF9AwYDwRg24IYwfr8U82MnE5" 
+                   download 
+                   class="download-btn"
+                   aria-label="সাধারণ গণিত ডাউনলোড করুন">
+                  ডাউনলোড
+                </a>
+              </div>
+            </div>
+          </section>
+
+          <section class="book-card">
+            <img src="https://www.sohopathi.com/wp-content/uploads/2018/07/Physics-Class-10.jpg" 
+                 alt="সাধারণ বিজ্ঞান - ক্লাস ১০" 
+                 class="book-image">
+            <div class="book-content">
+              <h3>সাধারণ বিজ্ঞান</h3>
+              <p>ক্লাস: ১০</p>
+              <div class="book-links">
+                <a href="https://drive.google.com/file/d/13_O8QxKeb-n1Uzedizp-DOF3W308ooH8/view" 
+                   target="_blank" 
+                   class="read-btn"
+                   aria-label="সাধারণ বিজ্ঞান পড়ুন">
+                  পড়ুন
+                </a>
+                <a href="https://drive.google.com/uc?export=download&id=13_O8QxKeb-n1Uzedizp-DOF3W308ooH8" 
+                   download 
+                   class="download-btn"
+                   aria-label="সাধারণ বিজ্ঞান ডাউনলোড করুন">
+                  ডাউনলোড
+                </a>
+              </div>
+            </div>
+          </section>
+        </div>
+      </article>
+
+      <!-- Higher Secondary Books -->
+      <article id="higherSecondaryContent" class="category-content" role="tabpanel" aria-labelledby="higher-secondary-heading">
+        <h2 id="higher-secondary-heading">উচ্চ মাধ্যমিক স্তরের বই (ক্লাস ১১-১২)</h2>
+        <div class="books-container">
+          <section class="book-card">
+            <img src="images/ImageN/bn11.png" 
+                 alt="উচ্চ মাধ্যমিক বাংলা - ক্লাস ১১" 
+                 class="book-image">
+            <div class="book-content">
+              <h3>উচ্চ মাধ্যমিক বাংলা</h3>
+              <p>ক্লাস: ১১</p>
+              <div class="book-links">
+                <a href="https://drive.google.com/file/d/11tNq5F0bfYFf5QexWOWAz3VlpryMlaFD/view" 
+                   target="_blank" 
+                   class="read-btn"
+                   aria-label="উচ্চ মাধ্যমিক বাংলা পড়ুন">
+                  পড়ুন
+                </a>
+                <a href="https://drive.google.com/uc?export=download&id=11tNq5F0bfYFf5QexWOWAz3VlpryMlaFD" 
+                   download 
+                   class="download-btn"
+                   aria-label="উচ্চ মাধ্যমিক বাংলা ডাউনলোড করুন">
+                  ডাউনলোড
+                </a>
+              </div>
+            </div>
+          </section>
+
+          <section class="book-card">
+            <img src="images/imageN/en11.png" 
+                 alt="উচ্চ মাধ্যমিক ইংরেজি - ক্লাস ১২" 
+                 class="book-image">
+            <div class="book-content">
+              <h3>উচ্চ মাধ্যমিক ইংরেজি</h3>
+              <p>ক্লاس: ১২</p>
+              <div class="book-links">
+                <a href="https://drive.google.com/file/d/1MJuzkvoyB57hueE2qasG3ou9nokQHY7T/view" 
+                   target="_blank" 
+                   class="read-btn"
+                   aria-label="উচ্চ মাধ্যমিক ইংরেজি পড়ুন">
+                  পড়ুন
+                </a>
+                <a href="https://drive.google.com/uc?export=download&id=1MJuzkvoyB57hueE2qasG3ou9nokQHY7T" 
+                   download 
+                   class="download-btn"
+                   aria-label="উচ্চ মাধ্যমিক ইংরেজি ডাউনলোড করুন">
+                  ডাউনলোড
+                </a>
+              </div>
+            </div>
+          </section>
+
+          <section class="book-card">
+            <img src="https://fs.pbs.com.bd/DIR/Com/PBS/Product/ImageDetails/2300059.jpg" 
+                 alt="পদার্থবিজ্ঞান - ক্লাস ১২" 
+                 class="book-image">
+            <div class="book-content">
+              <h3>পদার্থবিজ্ঞান</h3>
+              <p>ক্লাস: ১২</p>
+              <div class="book-links">
+                <a href="https://drive.google.com/file/d/1dKqCGJpT37JAu5ABqcuB6hOUBxyncZha/view" 
+                   target="_blank" 
+                   class="read-btn"
+                   aria-label="পদার্থবিজ্ঞান পড়ুন">
+                  পড়ুন
+                </a>
+                <a href="https://drive.google.com/uc?export=download&id=1dKqCGJpT37JAu5ABqcuB6hOUBxyncZha" 
+                   download 
+                   class="download-btn"
+                   aria-label="পদার্থবিজ্ঞান ডাউনলোড করুন">
+                  ডাউনলোড
+                </a>
+              </div>
+            </div>
+          </section>
+        </div>
+      </article>
+    </section>
+
+    <!-- Additional Resources Section -->
+    <section id="additionalResources" aria-labelledby="additional-resources-heading">
+      <h2 id="additional-resources-heading">অতিরিক্ত শিক্ষা সম্পদ</h2>
+      <div class="resources-container">
+        <article class="resource-card">
+          <h3>গুগল ড্রাইভ</h3>
+          <p>বইগুলির ডিজিটাল সংস্করণ</p>
+          <a href="https://drive.google.com" 
+             target="_blank" 
+             class="visit-btn"
+             aria-label="গুগল ড্রাইভ ভিজিট করুন">
+            ভিজিট করুন
+          </a>
+        </article>
+
+        <article class="resource-card">
+          <h3>মুক্তপাঠ</h3>
+          <p>বাংলাদেশ সরকারের ডিজিটাল লার্নিং প্ল্যাটফর্ম</p>
+          <a href="https://muktopaath.gov.bd" 
+             target="_blank" 
+             class="visit-btn"
+             aria-label="মুক্তপাঠ ভিজিট করুন">
+            ভিজিট করুন
+          </a>
+        </article>
+
+        <article class="resource-card">
+          <h3>বাংলাদেশ ওপেন ইউনিভার্সিটি</h3>
+          <p>মুক্ত ও দূরশিক্ষণ সুবিধা</p>
+          <a href="https://www.bou.edu.bd" 
+             target="_blank" 
+             class="visit-btn"
+             aria-label="বাংলাদেশ ওপেন ইউনিভার্সিটি ভিজিট করুন">
+            ভিজিট করুন
+          </a>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="social-section">
+      <h3>যোগাযোগ করো</h3>
+      <div class="social-links">
+        <a href="https://www.facebook.com/profile.php?id=100091793178239&sk=about" 
+           target="_blank" 
+           class="social-link"
+           aria-label="ফেসবুকে আমাদের ফলো করুন">
+          <img src="https://cdn-icons-png.flaticon.com/512/124/124010.png" alt="Facebook">
+        </a>
+        
+        <a href="https://wa.me/01963883265" 
+           target="_blank" 
+           class="social-link"
+           aria-label="হোয়াটসঅ্যাপে আমাদের সাথে যোগাযোগ করুন">
+          <img src="https://cdn-icons-png.flaticon.com/512/220/220236.png" alt="WhatsApp">
+        </a>
+        
+        <a href="https://www.instagram.com/nasratj35" 
+           target="_blank" 
+           class="social-link"
+           aria-label="ইনস্টাগ্রামে আমাদের ফলো করুন">
+          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+        </a>
+        
+        <a href="https://www.linkedin.com/in/nasrat-jahan-b23b81277" 
+           target="_blank" 
+           class="social-link"
+           aria-label="লিঙ্কডইনে আমাদের সাথে সংযুক্ত হন">
+          <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn">
+        </a>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      &copy; নাছরাত জাহান. সর্বস্বত্ব সংরক্ষিত।
+    </div>
+  </footer>
+
+  <script>
+    // Category switching function
+    function openCategory(categoryId, element) {
+      // Hide all category contents
+      const contents = document.querySelectorAll('.category-content');
+      contents.forEach(content => {
+        content.classList.remove('active');
+        content.setAttribute('aria-hidden', 'true');
+      });
+
+      // Remove active class from all buttons
+      const buttons = document.querySelectorAll('.tab-btn');
+      buttons.forEach(button => {
+        button.classList.remove('active');
+        button.setAttribute('aria-selected', 'false');
+      });
+
+      // Show the selected category and mark button as active
+      const selectedContent = document.getElementById(categoryId);
+      selectedContent.classList.add('active');
+      selectedContent.setAttribute('aria-hidden', 'false');
+      
+      element.classList.add('active');
+      element.setAttribute('aria-selected', 'true');
+    }
+
+    // Initialize the page
+    document.addEventListener('DOMContentLoaded', function() {
+      // Set initial ARIA attributes
+      const activeTab = document.querySelector('.tab-btn.active');
+      const activeContent = document.querySelector('.category-content.active');
+      
+      if (activeTab) {
+        activeTab.setAttribute('aria-selected', 'true');
+      }
+      
+      if (activeContent) {
+        activeContent.setAttribute('aria-hidden', 'false');
+      }
+    });
+
+    // Google Translate Script
+    function googleTranslateElementInit() {
+      new google.translate.TranslateElement(
+        {
+          pageLanguage: 'bn',
+          includedLanguages: 'en,hi,fr,es,de,ar,zh-CN,ja',
+          layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+        },
+        'googleTranslateElement'
+      );
+    }
+  </script>
+
+  <script
+    type="text/javascript"
+    src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"
+  ></script>
+</body>
+
+</html>
